@@ -1,9 +1,10 @@
+import { TBlog } from "@/types";
 import Image from "next/image";
 import Link from "next/link";
 import { AiFillLike } from "react-icons/ai";
 import { FaCalendar } from "react-icons/fa";
 
-const BlogCard = ({ blog }) => {
+const BlogCard = ({ blog }: { blog: TBlog }) => {
   return (
     <div className="card w-full bg-base-100 shadow-xl">
       <figure>
@@ -12,7 +13,7 @@ const BlogCard = ({ blog }) => {
           width={600}
           height={100}
           alt="blog image"
-          className="rounded-xl h-64"
+          className="rounded-xl h-96 object-cover"
         />
       </figure>
       <div className="card-body">
